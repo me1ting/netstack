@@ -15,8 +15,8 @@
 package tcp
 
 import (
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/seqnum"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/seqnum"
 )
 
 const (

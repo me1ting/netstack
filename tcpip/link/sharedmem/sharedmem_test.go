@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package sharedmem
@@ -27,12 +28,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/netstack/tcpip"
-	"github.com/google/netstack/tcpip/buffer"
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/link/sharedmem/pipe"
-	"github.com/google/netstack/tcpip/link/sharedmem/queue"
-	"github.com/google/netstack/tcpip/stack"
+	"github.com/me1ting/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/link/sharedmem/pipe"
+	"github.com/me1ting/netstack/tcpip/link/sharedmem/queue"
+	"github.com/me1ting/netstack/tcpip/stack"
 )
 
 const (

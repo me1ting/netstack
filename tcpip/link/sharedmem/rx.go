@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package sharedmem
@@ -20,8 +21,8 @@ import (
 	"sync/atomic"
 	"syscall"
 
-	"github.com/google/netstack/tcpip/link/rawfile"
-	"github.com/google/netstack/tcpip/link/sharedmem/queue"
+	"github.com/me1ting/netstack/tcpip/link/rawfile"
+	"github.com/me1ting/netstack/tcpip/link/sharedmem/queue"
 )
 
 // rx holds all state associated with an rx queue.

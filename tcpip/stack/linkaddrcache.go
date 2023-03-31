@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/google/netstack/sleep"
-	"github.com/google/netstack/tcpip"
+	"github.com/me1ting/netstack/sleep"
+	"github.com/me1ting/netstack/tcpip"
 )
 
 const linkAddrCacheSize = 512 // max cache entries

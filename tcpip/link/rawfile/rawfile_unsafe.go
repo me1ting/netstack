@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 // Package rawfile contains utilities for using the netstack with raw host
@@ -22,7 +23,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/google/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip"
 	"golang.org/x/sys/unix"
 )
 

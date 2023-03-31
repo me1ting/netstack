@@ -21,23 +21,23 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/netstack/tcpip"
-	"github.com/google/netstack/tcpip/buffer"
-	"github.com/google/netstack/tcpip/checker"
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/link/channel"
-	"github.com/google/netstack/tcpip/link/loopback"
-	"github.com/google/netstack/tcpip/link/sniffer"
-	"github.com/google/netstack/tcpip/network/ipv4"
-	"github.com/google/netstack/tcpip/network/ipv6"
-	"github.com/google/netstack/tcpip/stack"
-	"github.com/google/netstack/tcpip/transport/udp"
-	"github.com/google/netstack/waiter"
+	"github.com/me1ting/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/checker"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/link/channel"
+	"github.com/me1ting/netstack/tcpip/link/loopback"
+	"github.com/me1ting/netstack/tcpip/link/sniffer"
+	"github.com/me1ting/netstack/tcpip/network/ipv4"
+	"github.com/me1ting/netstack/tcpip/network/ipv6"
+	"github.com/me1ting/netstack/tcpip/stack"
+	"github.com/me1ting/netstack/tcpip/transport/udp"
+	"github.com/me1ting/netstack/waiter"
 )
 
 // Addresses and ports used for testing. It is recommended that tests stick to
 // using these addresses as it allows using the testFlow helper.
-// Naming rules: 'stack*'' denotes local addresses and ports, while 'test*'
+// Naming rules: 'stack*” denotes local addresses and ports, while 'test*'
 // represents the remote endpoint.
 const (
 	v4MappedAddrPrefix    = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff"

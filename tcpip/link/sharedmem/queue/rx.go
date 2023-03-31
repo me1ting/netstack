@@ -20,7 +20,7 @@ import (
 	"encoding/binary"
 	"sync/atomic"
 
-	"github.com/google/netstack/tcpip/link/sharedmem/pipe"
+	"github.com/me1ting/netstack/tcpip/link/sharedmem/pipe"
 	"log"
 )
 

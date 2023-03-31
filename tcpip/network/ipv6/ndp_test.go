@@ -18,12 +18,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/netstack/tcpip"
-	"github.com/google/netstack/tcpip/buffer"
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/link/channel"
-	"github.com/google/netstack/tcpip/stack"
-	"github.com/google/netstack/tcpip/transport/icmp"
+	"github.com/me1ting/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/link/channel"
+	"github.com/me1ting/netstack/tcpip/stack"
+	"github.com/me1ting/netstack/tcpip/transport/icmp"
 )
 
 // setupStackAndEndpoint creates a stack with a single NIC with a link-local

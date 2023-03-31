@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build (linux && amd64) || (linux && arm64)
 // +build linux,amd64 linux,arm64
 
 package fdbased
@@ -20,10 +21,10 @@ import (
 	"encoding/binary"
 	"syscall"
 
-	"github.com/google/netstack/tcpip"
-	"github.com/google/netstack/tcpip/buffer"
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/link/rawfile"
+	"github.com/me1ting/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/link/rawfile"
 	"golang.org/x/sys/unix"
 )
 
@@ -41,11 +42,12 @@ const (
 // Memory allocated for the ring buffer: tpBlockSize * tpBlockNR = 2 MiB
 //
 // NOTE:
-//   Frames need to be aligned at 16 byte boundaries.
-//   BlockSize needs to be page aligned.
 //
-//   For details see PACKET_MMAP setting constraints in
-//   https://www.kernel.org/doc/Documentation/networking/packet_mmap.txt
+//	Frames need to be aligned at 16 byte boundaries.
+//	BlockSize needs to be page aligned.
+//
+//	For details see PACKET_MMAP setting constraints in
+//	https://www.kernel.org/doc/Documentation/networking/packet_mmap.txt
 const (
 	tpFrameSize = 65536 + 128
 	tpBlockSize = tpFrameSize * 32

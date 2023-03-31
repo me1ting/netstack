@@ -15,20 +15,21 @@
 package iptables
 
 import (
-	"github.com/google/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/buffer"
 )
 
 // A Hook specifies one of the hooks built into the network stack.
 //
-//                      Userspace app          Userspace app
-//                            ^                      |
-//                            |                      v
-//                         [Input]               [Output]
-//                            ^                      |
-//                            |                      v
-//                            |                   routing
-//                            |                      |
-//                            |                      v
+//	Userspace app          Userspace app
+//	      ^                      |
+//	      |                      v
+//	   [Input]               [Output]
+//	      ^                      |
+//	      |                      v
+//	      |                   routing
+//	      |                      |
+//	      |                      v
+//
 // ----->[Prerouting]----->routing----->[Forward]---------[Postrouting]----->
 type Hook uint
 
@@ -106,8 +107,8 @@ type IPTables struct {
 
 // A Table defines a set of chains and hooks into the network stack. The
 // currently supported tables are:
-//   * nat
-//   * mangle
+//   - nat
+//   - mangle
 type Table struct {
 	// BuiltinChains holds the un-deletable chains built into netstack. If
 	// a hook isn't present in the map, this table doesn't utilize that

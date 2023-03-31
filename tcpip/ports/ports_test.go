@@ -18,7 +18,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/google/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip"
 )
 
 const (

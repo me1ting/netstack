@@ -19,15 +19,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/netstack/tcpip"
-	"github.com/google/netstack/tcpip/buffer"
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/link/channel"
-	"github.com/google/netstack/tcpip/link/sniffer"
-	"github.com/google/netstack/tcpip/network/arp"
-	"github.com/google/netstack/tcpip/network/ipv4"
-	"github.com/google/netstack/tcpip/stack"
-	"github.com/google/netstack/tcpip/transport/icmp"
+	"github.com/me1ting/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/link/channel"
+	"github.com/me1ting/netstack/tcpip/link/sniffer"
+	"github.com/me1ting/netstack/tcpip/network/arp"
+	"github.com/me1ting/netstack/tcpip/network/ipv4"
+	"github.com/me1ting/netstack/tcpip/stack"
+	"github.com/me1ting/netstack/tcpip/transport/icmp"
 )
 
 const (

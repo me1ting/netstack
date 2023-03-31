@@ -12,7 +12,7 @@ Netstack is a network stack written in Go.
 Try it out on Linux by installing the tun_tcp_echo demo:
 
 ```
-go install github.com/google/netstack/tcpip/sample/tun_tcp_echo
+go install github.com/me1ting/netstack/tcpip/sample/tun_tcp_echo
 ```
 
 Create a TUN device with:

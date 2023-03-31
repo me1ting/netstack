@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package rawfile
@@ -20,7 +21,7 @@ import (
 	"fmt"
 	"syscall"
 
-	"github.com/google/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip"
 )
 
 const maxErrno = 134

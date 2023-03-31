@@ -25,15 +25,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/google/netstack/rand"
-	"github.com/google/netstack/sleep"
-	"github.com/google/netstack/tcpip"
-	"github.com/google/netstack/tcpip/buffer"
-	"github.com/google/netstack/tcpip/header"
-	"github.com/google/netstack/tcpip/iptables"
-	"github.com/google/netstack/tcpip/ports"
-	"github.com/google/netstack/tcpip/seqnum"
-	"github.com/google/netstack/waiter"
+	"github.com/me1ting/netstack/rand"
+	"github.com/me1ting/netstack/sleep"
+	"github.com/me1ting/netstack/tcpip"
+	"github.com/me1ting/netstack/tcpip/buffer"
+	"github.com/me1ting/netstack/tcpip/header"
+	"github.com/me1ting/netstack/tcpip/iptables"
+	"github.com/me1ting/netstack/tcpip/ports"
+	"github.com/me1ting/netstack/tcpip/seqnum"
+	"github.com/me1ting/netstack/waiter"
 	"golang.org/x/time/rate"
 )
 
@@ -598,9 +598,10 @@ func (s *Stack) SetNetworkProtocolOption(network tcpip.NetworkProtocolNumber, op
 // e.g.
 // var v ipv4.MyOption
 // err := s.NetworkProtocolOption(tcpip.IPv4ProtocolNumber, &v)
-// if err != nil {
-//   ...
-// }
+//
+//	if err != nil {
+//	  ...
+//	}
 func (s *Stack) NetworkProtocolOption(network tcpip.NetworkProtocolNumber, option interface{}) *tcpip.Error {
 	netProto, ok := s.networkProtocols[network]
 	if !ok {
@@ -625,9 +626,10 @@ func (s *Stack) SetTransportProtocolOption(transport tcpip.TransportProtocolNumb
 // values. This method returns an error if the protocol is not supported or
 // option is not supported by the protocol implementation.
 // var v tcp.SACKEnabled
-// if err := s.TransportProtocolOption(tcpip.TCPProtocolNumber, &v); err != nil {
-//   ...
-// }
+//
+//	if err := s.TransportProtocolOption(tcpip.TCPProtocolNumber, &v); err != nil {
+//	  ...
+//	}
 func (s *Stack) TransportProtocolOption(transport tcpip.TransportProtocolNumber, option interface{}) *tcpip.Error {
 	transProtoState, ok := s.transportProtocols[transport]
 	if !ok {
